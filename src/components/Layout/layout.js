@@ -13,12 +13,12 @@ import Header from '../Header';
 import styles from './layout.module.scss';
 
 const Layout = ({ children }) => (
-  <Fragment>
+  <div className={styles.site}>
     <Header />
     <main className={styles.main}>
       {children}
     </main>
-  </Fragment>
+  </div>
 );
 
 Layout.propTypes = {

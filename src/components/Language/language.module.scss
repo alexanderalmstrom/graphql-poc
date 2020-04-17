@@ -4,3 +4,15 @@
   align-self: center;
   justify-self: end;
 }
+
+.button {
+  background-color: transparent;
+  border-color: transparent;
+  color: color('white');
+  padding: 0.2rem 0;
+  margin: 0 0.4rem;
+}
+
+.is-selected {
+  border-bottom-color: color('white');
+}
