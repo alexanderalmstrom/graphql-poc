@@ -1,0 +1,32 @@
+@import '../../css/abstracts';
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  padding-left: $grid-gutter / 2;
+  padding-right: $grid-gutter / 2;
+  height: rem(60);
+  display: grid;
+  grid-template-columns: 2fr 2fr auto;
+}
+
+.logo {
+  font-size: rem(20);
+  text-decoration: none;
+  white-space: nowrap;
+  justify-self: start;
+  align-self: center;
+}
+
+@include media('>=large') {
+  .container {
+    height: rem(80);
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+}

@@ -1,0 +1,45 @@
+$root-size: 16;
+
+$grid-width: 75em;
+$grid-gutter: 1.875em;
+$grid-columns: 12;
+
+$breakpoints: (
+  'small': 30em,
+  'medium': 48em,
+  'large': 64em,
+  'xlarge': 90em,
+  'xxlarge': 160em
+);
+
+$spacings: (
+  'small': 15,
+  'medium': 30,
+  'large': 60,
+  'xlarge': 120,
+);
+
+$sizes: (
+  'base': 16px,
+  'display': 112px,
+  'h1': 56px,
+  'h2': 44px,
+  'h3': 34px,
+  'h4': 26px,
+  'h5': 20px,
+  'h6': 16px
+);
+
+$colors: (
+  'white': (
+    'base': #fff
+  ),
+  'black': (
+    'base': #000000,
+    'light': #151515
+  ),
+  'beige': (
+    'base': #FFFDF9,
+    'dark': #FBF8ED
+  )
+);

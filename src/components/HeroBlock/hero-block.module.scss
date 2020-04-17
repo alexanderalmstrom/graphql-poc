@@ -1,0 +1,40 @@
+@import '../../css/abstracts';
+
+.container {
+  display: grid;
+  background-color: color('black');
+}
+
+.content,
+.image {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+
+.content {
+  max-width: 80%;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+  padding: 5%;
+  color: color('white');
+}
+
+.image {
+  opacity: 0.8;
+}
+
+.title {
+  @include display;
+
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+@include media(">=medium") {
+  .content {
+    max-width: 80%;
+  }
+}

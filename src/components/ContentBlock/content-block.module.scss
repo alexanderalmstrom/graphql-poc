@@ -1,0 +1,17 @@
+@import '../../css/abstracts';
+
+.section {
+  padding-top: spacing('large');
+  padding-bottom: spacing('large');
+}
+
+.container {
+  @include container;
+}
+
+@include media(">=large") {
+  .section {
+    padding-top: spacing('xlarge');
+    padding-bottom: spacing('xlarge');
+  }
+}

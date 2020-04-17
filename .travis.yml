@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - '13.9.0'
+before_script:
+  - yarn add global gatsby
+script: yarn build
+cache: yarn
+deploy:
+  provider: surge
+  project: public/
+  domain: https://graphql-poc.surge.sh
+  skip_cleanup: true
+  on:
+    branch: master
+branches:
+  only:
+    - master
+git:
+  lfs_skip_smudge: true

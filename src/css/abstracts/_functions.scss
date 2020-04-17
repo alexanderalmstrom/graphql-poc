@@ -1,0 +1,55 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}
+
+@function rem($value) {
+  $unit: if(is-number($value), unit($value), null);
+
+  @if ($unit == 'px' or unitless($value)) {
+    @return (strip-unit($value) / strip-unit($root-size)) * 1rem;
+  }
+
+  @if ($unit == 'rem') {
+    @return $value;
+  }
+
+  @if ($unit == 'em') {
+    @return strip-unit($value) * 1rem;
+  }
+
+  @return $value;
+}
+
+@function bp($value) {
+  @if (is-number($value)) {
+    @return $value;
+  }
+
+  @return map-get($breakpoints, $value);
+}
+
+@function size($value, $unit: 'rem') {
+  $size: if(is-number($value), $value, map-get($sizes, $value));
+
+  @if ($unit == '%') {
+    @return percentage(strip-unit($size) / strip-unit($root-size));
+  }
+
+  @return rem($size);
+}
+
+@function spacing($name) {
+  @return rem(map-get($spacings, $name));
+}
+
+@function color($name, $shade: 'base') {
+  @return map-get(map-get($colors, $name), $shade);
+}

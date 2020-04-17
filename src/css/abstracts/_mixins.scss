@@ -1,0 +1,98 @@
+@mixin container($container-width: $grid-width) {
+  width: 100%;
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin gutter($gutter: $grid-gutter) {
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+@mixin col($size, $gutter: $grid-gutter) {
+  @include gutter($gutter);
+
+  max-width: ($size / $grid-columns) * 100%;
+  flex: 0 0 ($size / $grid-columns) * 100%;
+}
+
+@mixin fluid-type($minSize, $maxSize, $minWidth, $maxWidth) {
+  $minS: rem($minSize);
+  $maxS: rem($maxSize);
+  $minW: rem(bp($minWidth));
+  $maxW: rem(bp($maxWidth));
+
+  font-size: $minS;
+
+  @media screen and (min-width: $minW) {
+    font-size: calc(#{$minS} + #{strip-unit($maxS - $minS)} * (100vw - #{$minW}) / #{strip-unit($maxW - $minW)});
+  }
+
+  @media screen and (min-width: $maxW) {
+    font-size: $maxS;
+  }
+}
+
+@mixin label {
+  font-family: 'Avenir', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@mixin display {
+  @include fluid-type(
+    size('h3'),
+    size('display'),
+    'small',
+    'xxlarge'
+  );
+}
+
+@mixin h1 {
+  font-size: size('h2');
+
+  @include media(">medium") {
+    font-size: size('h1', 'em');
+  }
+}
+
+@mixin h2 {
+  font-size: size('h3');
+
+  @include media(">medium") {
+    font-size: size('h2');
+  }
+}
+
+@mixin h3 {
+  font-size: size('h4');
+
+  @include media(">medium") {
+    font-size: size('h3');
+  }
+}
+
+@mixin h4 {
+  font-size: size('h5');
+
+  @include media(">medium") {
+    font-size: size('h4');
+  }
+}
+
+@mixin h5 {
+  font-size: size('h6');
+
+  @include media(">medium") {
+    font-size: size('h5');
+  }
+}
+
+@mixin h6 {
+  @include label;
+
+  font-size: size('h6');
+}

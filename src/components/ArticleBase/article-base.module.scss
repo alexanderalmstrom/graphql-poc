@@ -1,0 +1,10 @@
+@import '../../css/abstracts';
+
+.container {
+  @include container;
+}
+
+.header,
+.content {
+  @include col(12);
+}
