@@ -20,6 +20,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@envato/react-breakpoints": "^1.0.2",
     "babel-plugin-styled-components": "^1.10.7",
     "classnames": "^2.2.6",
     "date-and-time": "^0.13.1",

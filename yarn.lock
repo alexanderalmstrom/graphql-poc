@@ -958,6 +958,18 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@envato/react-breakpoints@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@envato/react-breakpoints/-/react-breakpoints-1.0.2.tgz#d97070bda048c6821d0ebd0e17f5a87dba64a285"
+  integrity sha512-/+rkcZogOuIsvxY8muLHS+dZ9jMYK/ibDMuPHDpzZYZbBQn7kq6NnFbIVtSJTzwBtj4VtxtnGFGBYtNv4Z707Q==
+  dependencies:
+    "@envato/react-resize-observer-hook" "^1.0.1"
+
+"@envato/react-resize-observer-hook@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@envato/react-resize-observer-hook/-/react-resize-observer-hook-1.0.1.tgz#e02116e3074c390f5c5a4d3206a7f471916693c3"
+  integrity sha512-y7E9TYtofzKd64RW07KlM4QfcSyxOG1q4lRlO+wL3KtkmzlHjTJuuKSshHGKuT4ml5pg4oqMpLjQDDnIb6XWog==
+
 "@formatjs/intl-displaynames@^1.2.0":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-1.2.2.tgz#d0f0edebad96660196d282f609a1169a88a27d4a"
