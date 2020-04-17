@@ -5,6 +5,10 @@
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+
+  @include media('>=medium') {
+    @include gutter;
+  }
 }
 
 @mixin gutter($gutter: $grid-gutter) {
@@ -34,12 +38,6 @@
   @media screen and (min-width: $maxW) {
     font-size: $maxS;
   }
-}
-
-@mixin label {
-  font-family: 'Avenir', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 
 @mixin display {
@@ -92,7 +90,5 @@
 }
 
 @mixin h6 {
-  @include label;
-
   font-size: size('h6');
 }

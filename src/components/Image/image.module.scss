@@ -1,1 +1,9 @@
 @import '../../css/abstracts';
+
+.image {
+  margin-bottom: spacing('medium');
+
+  @include media('>=medium') {
+    margin-bottom: spacing('large');
+  }
+}
