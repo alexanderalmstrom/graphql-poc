@@ -12,6 +12,7 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO title={page.title} />
+      <h1>Panagora!</h1>
       <ArticleBase {...page} />
     </Layout>
   );
