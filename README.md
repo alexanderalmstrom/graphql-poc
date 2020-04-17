@@ -36,14 +36,34 @@ contentful space import --space-id YOUR_SPACE_ID --content-file ./contentful-exp
 
 Create a new `.env` file in the root of this repository. Add Contentful space environments to this. `.env` found under Settings > API keys. Look at `.env.example` for example configuration.
 
-### Install npm dependencies
+## Install npm dependencies
 
 ```bash
 yarn install
 ```
 
-### Run development server
+## Run development server
 
 ```bash
 yarn start
+```
+
+## Build site ready for production
+
+```bash
+yarn build
+```
+
+## Deploy to Surge.sh
+
+Get started [here](http://surge.sh/help/getting-started-with-surge)
+
+```bash
+yarn deploy
+```
+
+or manually
+
+```bash
+surge public/ --domain https://graphql-poc.surge.sh
 ```
