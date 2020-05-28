@@ -2,8 +2,8 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: 'GraphQL POC',
-    description: 'Demo with GraphQL fragments, TravisCI and Gatsby intl plugin.',
+    title: 'LeiPass',
+    description: 'One stop shop for LEI.',
   },
   plugins: [
     'gatsby-plugin-stylelint',
@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gratsby-poc',
-        short_name: 'gatsby-poc',
+        name: 'leipass',
+        short_name: 'leipass',
         start_url: '/',
         background_color: '#FFFDF9',
         theme_color: '#151515',
